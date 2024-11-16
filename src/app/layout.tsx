@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     siteName: "Pulse Studio - Website for Club Branding and Events",
     images: [
       {
-        url: "../public/og-img.png", // This image should be in your public directory
+        url: "https://utfs.io/f/PgmqDX4sng1lZ8tIN71mDHkbvR6lEYfF0WiParMy2dujG5x7", // This image should be in your public directory
         width: 1200,
         height: 630,
         alt: "Pulse BD",
@@ -36,9 +36,10 @@ export const metadata: Metadata = {
   },
 
   icons: {
-    icon: "../public/icon.png",
-    shortcut: "/favicon-16x16.png",
-    apple: "/apple-touch-icon.png",
+    icon: "https://utfs.io/f/PgmqDX4sng1lZ8tIN71mDHkbvR6lEYfF0WiParMy2dujG5x7",
+    shortcut:
+      "https://utfs.io/f/PgmqDX4sng1lZ8tIN71mDHkbvR6lEYfF0WiParMy2dujG5x7",
+    apple: "https://utfs.io/f/PgmqDX4sng1lZ8tIN71mDHkbvR6lEYfF0WiParMy2dujG5x7",
   },
   robots: {
     index: true,
