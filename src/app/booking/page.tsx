@@ -10,22 +10,19 @@ export default function BookingPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrollY, setScrollY] = useState(0);
 
-  const script = document.createElement("script");
-  script.src = "https://assets.calendly.com/assets/external/widget.js";
-  script.async = true;
-  document.body.appendChild(script);
-
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
-    const script = document.createElement("script");
+    if (typeof window !== "undefined") {
+      const script = document.createElement("script");
 
-    window.addEventListener("scroll", handleScroll);
-    script.src = "https://assets.calendly.com/assets/external/widget.js";
-    script.async = true;
-    document.body.appendChild(script);
+      window.addEventListener("scroll", handleScroll);
+      script.src = "https://assets.calendly.com/assets/external/widget.js";
+      script.async = true;
+      document.body.appendChild(script);
+    }
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      document.body.removeChild(script);
     };
   }, []);
 
