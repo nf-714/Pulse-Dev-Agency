@@ -46,10 +46,10 @@ export default function FullScreenHero() {
               Pulse <span className="text-purple-300">Studio</span>
             </Link>
             <div className="hidden md:flex space-x-8">
-              {["Solutions", "Pricing", "Resources", "Company"].map((item) => (
+              {["Features", "About Me", "Pricing", "Contact"].map((item) => (
                 <Link
                   key={item}
-                  href={`/${item.toLowerCase()}`}
+                  href={`#${item.toLowerCase().split(" ").join("-")}`}
                   className="text-white hover:text-purple-200 transition-colors text-sm uppercase tracking-wider"
                 >
                   {item}
@@ -57,14 +57,16 @@ export default function FullScreenHero() {
               ))}
             </div>
             <div className="hidden md:flex space-x-4 items-center">
-              <Button
-                variant="outline"
-                size="lg"
-                className="bg-white text-purple-700 hover:bg-purple-100 transition-colors px-8 py-6 text-lg rounded-full shadow-lg hover:shadow-xl"
-              >
-                Book a call
-                <ChevronRight className="ml-2 h-5 w-5" />
-              </Button>
+              <Link href="booking">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="bg-white text-purple-700 hover:bg-purple-100 transition-colors px-8 py-6 text-lg rounded-full shadow-lg hover:shadow-xl"
+                >
+                  Book a call
+                  <ChevronRight className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
             </div>
             <Button
               variant="ghost"
@@ -89,27 +91,28 @@ export default function FullScreenHero() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.2 }}
-              className="md:hidden fixed inset-0 bg-purple-900 bg-opacity-95 backdrop-blur-lg z-40 flex flex-col justify-center items-center"
+              className="md:hidden fixed inset-0 bg-transparent bg-opacity-95 backdrop-blur-lg z-40 flex flex-col justify-center items-center"
             >
               <div className="flex flex-col space-y-6 text-center">
-                {["Solutions", "Pricing", "Resources", "Company"].map(
-                  (item) => (
-                    <Link
-                      key={item}
-                      href={`/${item.toLowerCase()}`}
-                      className="text-white hover:text-purple-200 transition-colors text-2xl font-semibold"
-                    >
-                      {item}
-                    </Link>
-                  )
-                )}
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="mt-4 border-white text-white hover:bg-white hover:text-purple-700"
-                >
-                  Start Free Trial
-                </Button>
+                {["Features", "About Me", "Pricing", "Contact"].map((item) => (
+                  <Link
+                    key={item}
+                    href={`#${item.toLowerCase().split(" ").join("-")}`}
+                    className="text-white hover:text-purple-200 transition-colors text-2xl font-semibold"
+                  >
+                    {item}
+                  </Link>
+                ))}
+                <Link href="/booking">
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className="bg-white text-purple-700 hover:bg-purple-100 transition-colors px-8 py-6 text-lg rounded-full shadow-lg hover:shadow-xl"
+                  >
+                    Book a call
+                    <ChevronRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </Link>
               </div>
             </motion.div>
           )}
@@ -140,21 +143,26 @@ export default function FullScreenHero() {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4"
             >
-              <Button
-                variant="default"
-                size="lg"
-                className="bg-white text-purple-700 hover:bg-purple-100 transition-colors px-8 py-6 text-lg rounded-full shadow-lg hover:shadow-xl"
-              >
-                See Pricing
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="bg-white text-purple-700 hover:bg-purple-100 transition-colors px-8 py-6 text-lg rounded-full shadow-lg hover:shadow-xl"
-              >
-                Book a call
-                <ChevronRight className="ml-2 h-5 w-5" />
-              </Button>
+              <Link href="#pricing">
+                <Button
+                  variant="default"
+                  size="lg"
+                  className="bg-white text-purple-700 hover:bg-purple-100 transition-colors px-8 py-6 text-lg rounded-full shadow-lg hover:shadow-xl"
+                >
+                  See Pricing
+                </Button>
+              </Link>
+
+              <Link href="/booking">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="bg-white text-purple-700 hover:bg-purple-100 transition-colors px-8 py-6 text-lg rounded-full shadow-lg hover:shadow-xl"
+                >
+                  Book a call
+                  <ChevronRight className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
             </motion.div>
           </div>
         </div>

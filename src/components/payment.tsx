@@ -67,7 +67,10 @@ export function PremiumPricing() {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-gray-900 to-gray-800 py-20 sm:py-32">
+    <section
+      className="relative overflow-hidden bg-gradient-to-br from-gray-900 to-gray-800 py-20 sm:py-32"
+      id="pricing"
+    >
       <div className="absolute inset-0 bg-[url('/placeholder.svg?height=200&width=200')] opacity-10 mix-blend-overlay" />
       <div className="absolute inset-y-0 right-1/2 -z-10 mr-16 w-[200%] origin-bottom-left skew-x-[-30deg] bg-gray-800 shadow-xl shadow-indigo-600/10 ring-1 ring-indigo-50 sm:mr-28 lg:mr-0 xl:mr-16 xl:origin-center" />
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

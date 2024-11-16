@@ -1,7 +1,7 @@
 "use client";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
-import { Box, Layers, Zap } from "lucide-react";
+import { Box, Calendar, Layers, MessageSquare, Pen, Zap } from "lucide-react";
 import DotPattern from "./ui/dot-pattern";
 
 export default function Features() {
@@ -14,7 +14,8 @@ export default function Features() {
   };
   return (
     <section
-      className="p-4 bg-gradient-to-b from-slate-900 to-slate-800"
+      className="lg:h-[60rem] p-8 bg-gradient-to-b from-slate-900 to-slate-800"
+      id="features"
       style={style}
     >
       <motion.div
@@ -71,6 +72,51 @@ export default function Features() {
             <p className="text-gray-100 leading-relaxed">
               A sponsor section showcasing logos, links, and details boosts
               credibility and encourages future partnerships.
+            </p>
+          </div>
+
+          <div className="text-center">
+            <div className="flex justify-center mb-6">
+              <Pen className="w-16 h-16 text-purple-400" strokeWidth={1.5} />
+            </div>
+            <h3 className="text-2xl font-semibold mb-4 text-white">
+              Easy registration for events
+            </h3>
+            <p className="text-gray-100 leading-relaxed">
+              Sell tickets hassle-free with our seamless payment system that
+              connects directly to bkash.
+            </p>
+          </div>
+
+          <div className="text-center">
+            <div className="flex justify-center mb-6">
+              <Calendar
+                className="w-16 h-16 text-purple-400"
+                strokeWidth={1.5}
+              />
+            </div>
+            <h3 className="text-2xl font-semibold mb-4 text-white">
+              Complete Event Management System
+            </h3>
+            <p className="text-gray-100 leading-relaxed">
+              Keep your club organized with a centralized member database. Send
+              targeted announcements, track attendance, and manage member roles
+              effortlessly.
+            </p>
+          </div>
+          <div className="text-center">
+            <div className="flex justify-center mb-6">
+              <MessageSquare
+                className="w-16 h-16 text-purple-400"
+                strokeWidth={1.5}
+              />
+            </div>
+            <h3 className="text-2xl font-semibold mb-4 text-white">
+              Email marketing Integration
+            </h3>
+            <p className="text-gray-100 leading-relaxed">
+              Easy email marketing integration that sends everything from
+              welcome emails to event reminders without lifting a finger.
             </p>
           </div>
         </div>

@@ -8,6 +8,10 @@ const nextConfig = {
         port: "",
         pathname: "/image%208-x4SfVv6JeZnulLNWS8RhJXhdDE6Uwo.png",
       },
+      {
+        protocol: "https",
+        hostname: "pbs.twimg.com",
+      },
     ],
   },
 };

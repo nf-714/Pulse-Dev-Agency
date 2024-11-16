@@ -3,8 +3,9 @@
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { motion, useAnimation, useInView } from "framer-motion";
-import { ChevronRight, Github, Linkedin, Mail } from "lucide-react";
+import { Linkedin, Mail } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useRef } from "react";
 import GridPattern from "./ui/grid-pattern";
 
@@ -47,6 +48,7 @@ export default function AboutUs() {
     <section
       ref={ref}
       className="relative overflow-hidden py-20 sm:py-32"
+      id="about-me"
       style={{ backgroundColor: `hsla(222,47%,11%,1)` }}
     >
       <div className="absolute inset-0 bg-[url('/placeholder.svg?height=200&width=200')] opacity-5 mix-blend-overlay"></div>
@@ -111,7 +113,7 @@ export default function AboutUs() {
                 variants={itemVariants}
                 className="mt-8 flex flex-col sm:flex-row gap-4"
               >
-                <Button
+                {/*                 <Button
                   variant="default"
                   className="group bg-indigo-600 hover:bg-indigo-700 text-white"
                 >
@@ -120,25 +122,30 @@ export default function AboutUs() {
                 </Button>
                 <Button
                   variant="outline"
-                  className="border-gray-700 text-gray-300 hover:bg-gray-800"
+                  className="border-gray-700 text-gray-700 hover:text-gray-300 hover:bg-gray-800"
                 >
                   <Github className="mr-2 h-4 w-4" />
                   GitHub
-                </Button>
-                <Button
-                  variant="outline"
-                  className="border-gray-700 text-gray-300 hover:bg-gray-800"
-                >
-                  <Linkedin className="mr-2 h-4 w-4" />
-                  LinkedIn
-                </Button>
-                <Button
-                  variant="outline"
-                  className="border-gray-700 text-gray-300 hover:bg-gray-800"
-                >
-                  <Mail className="mr-2 h-4 w-4" />
-                  Contact
-                </Button>
+                </Button>*/}
+                <Link href="https://www.linkedin.com/in/nasif-fuad-5bba61186/">
+                  <Button
+                    variant="outline"
+                    className="border-gray-700 text-gray-700 hover:text-gray-300 hover:bg-gray-800"
+                  >
+                    <Linkedin className="mr-2 h-4 w-4" />
+                    LinkedIn
+                  </Button>
+                </Link>
+
+                <Link href="https://www.facebook.com/nf.senpai/">
+                  <Button
+                    variant="outline"
+                    className="border-gray-700 text-gray-700 hover:text-gray-300 hover:bg-gray-800"
+                  >
+                    <Mail className="mr-2 h-4 w-4" />
+                    Facebook
+                  </Button>
+                </Link>
               </motion.div>
             </div>
           </motion.div>
