@@ -2,7 +2,7 @@
 
 import { Resend } from "resend";
 
-export const sendEmail = (name, email, contact) => {
+export const sendEmail = (name: string, email: string, contact: string) => {
   const resend = new Resend(process.env.RESEND_API);
 
   resend.emails.send({
