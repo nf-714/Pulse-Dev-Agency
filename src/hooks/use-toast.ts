@@ -15,6 +15,14 @@ type ToasterToast = ToastProps & {
   action?: ToastActionElement;
 };
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+interface actionTypes {
+  ADD_TOAST: string;
+  UPDATE_TOAST: string;
+  DISMISS_TOAST: string;
+  REMOVE_TOAST: string;
+}
+
 let count = 0;
 
 function genId() {
