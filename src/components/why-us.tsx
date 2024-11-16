@@ -45,8 +45,8 @@ export default function WhyUs() {
                 Give Your Club a Home Online: Connect, Share, Grow!
               </h1>
               <p className="mt-6 text-xl/8 text-gray-300">
-                A website is more than just a digital presence—it's your club’s
-                hub for connecting with members, promoting events, and
+                A website is more than just a digital presence—it&apos;s your
+                club’s hub for connecting with members, promoting events, and
                 showcasing achievements. It makes your club accessible,
                 organized, and ready to grow in today’s online world.
               </p>
@@ -137,8 +137,8 @@ export default function WhyUs() {
                 Still unsure? Without a website, your club is missing the chance
                 to grow, stay organized, and connect with more students. A
                 website is essential for promoting events, managing members, and
-                building a stronger, more professional presence. Don't let your
-                club fall behind—boost it with a website today!
+                building a stronger, more professional presence. Don&apos;t let
+                your club fall behind—boost it with a website today!
               </p>
             </div>
           </div>
