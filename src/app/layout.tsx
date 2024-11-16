@@ -19,13 +19,13 @@ export const metadata: Metadata = {
   description:
     "Pulse Studio is a dynamic, creative agency specializing in club branding and event management. We design innovative websites that capture the essence of your brand while providing seamless event promotion and management tools. Whether you're looking to create a standout online presence for your nightclub or promote your next big event, Pulse Studio delivers tailor-made solutions to engage your audience and elevate your brand experience.",
   openGraph: {
-    title: "My Awesome App",
+    title: "Pulse Studio - Website for Club Branding and Events",
     description: "Discover amazing content and experiences on My Awesome App",
-    url: "https://myawesomeapp.com",
-    siteName: "My Awesome App",
+    url: "https://pulse-bd.vercel.app/",
+    siteName: "Pulse Studio - Website for Club Branding and Events",
     images: [
       {
-        url: "/og-img.jpg", // This image should be in your public directory
+        url: "../public/og-img.png", // This image should be in your public directory
         width: 1200,
         height: 630,
         alt: "Pulse BD",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   },
 
   icons: {
-    icon: "/src/public/icon.png",
+    icon: "../public/icon.png",
     shortcut: "/favicon-16x16.png",
     apple: "/apple-touch-icon.png",
   },
