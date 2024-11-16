@@ -29,25 +29,29 @@ function genId() {
   count = (count + 1) % Number.MAX_SAFE_INTEGER;
   return count.toString();
 }
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 
-type ActionType = typeof actionTypes;
+type actionTypes = {
+  ADD_TOAST: string;
+  UPDATE_TOAST: string;
+  DISMISS_TOAST: string;
+  REMOVE_TOAST: string;
+};
 
 type Action =
   | {
-      type: ActionType["ADD_TOAST"];
+      type: actionTypes["ADD_TOAST"];
       toast: ToasterToast;
     }
   | {
-      type: ActionType["UPDATE_TOAST"];
+      type: actionTypes["UPDATE_TOAST"];
       toast: Partial<ToasterToast>;
     }
   | {
-      type: ActionType["DISMISS_TOAST"];
+      type: actionTypes["DISMISS_TOAST"];
       toastId?: ToasterToast["id"];
     }
   | {
-      type: ActionType["REMOVE_TOAST"];
+      type: actionTypes["REMOVE_TOAST"];
       toastId?: ToasterToast["id"];
     };
 
